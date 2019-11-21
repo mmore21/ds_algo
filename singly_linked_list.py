@@ -11,7 +11,7 @@ class Node:
         self.next = next
 
     def __str__(self):
-        """ Override default string format of linked list when printed. """
+        """ Override default string format of node when printed. """
         return f"Node object: val={self.val}"
 
 class LinkedList:
