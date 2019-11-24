@@ -15,7 +15,10 @@ class Stack:
 
     def pop(self):
         """ Remove item from top of stack. """
-        del self.stack[-1]
+        if self.size():
+            del self.stack[-1]
+        else:
+            raise IndexError("Stack is empty.")
 
     def peek(self):
         """ Gets item at top of stack. """

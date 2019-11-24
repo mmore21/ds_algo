@@ -15,11 +15,14 @@ class Queue:
 
     def dequeue(self):
         """ Remove item from front of queue. """
-        self.queue.pop(0)
+        if self.size():
+            self.queue.pop(0)
+        else:
+            raise IndexError("Queue is empty.")
 
     def peek(self):
         """ Gets item at front of queue. """
-        if self.size() > 0:
+        if self.size():
             return self.queue[0]
         else:
             return None
