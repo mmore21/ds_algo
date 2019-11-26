@@ -32,7 +32,7 @@ class LinkedList:
     def delete(self, index):
         """ Delete a node from the linked list at a specified index. """
         # Raise IndexError if deletion index is out of linked list range.
-        if (index > self.length() - 1):
+        if (index < 0 or index > self.length() - 1):
             raise IndexError("Deletion index outside of linked list boundaries.")
 
         # Initialize variable to be set to value of deleted node
