@@ -10,7 +10,7 @@ def bubble_sort(arr):
     Passes over a list comparing two elements and repeats with a smaller,
     sliced off end of the list each iteration until sorted.
     """
-    for i, n1 in enumerate(arr):
+    for i in range(len(arr)):
         for j in range(len(arr) - i - 1):
             # swap if left element is greater than right element
             if (arr[j] > arr[j+1]):
