@@ -1,0 +1,5 @@
+# Set Python as language.
+language: python
+# Script to run tests.
+script:
+  - python -m unittest discover ./tests/

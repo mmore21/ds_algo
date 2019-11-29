@@ -1,8 +1,11 @@
 import unittest
-from binary_search_tree import *
+from lib.binary_search_tree import *
 
 class BinarySearchTreeTest(unittest.TestCase):
     def test_insert(self):
+        self.assertTrue(True)
+
+    def test_delete(self):
         self.assertTrue(True)
         
 
