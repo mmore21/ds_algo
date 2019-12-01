@@ -1,5 +1,7 @@
 # Set Python as language.
 language: python
+# Set Python version.
+python: 3.6
 # Script to run tests.
 script:
   - python -m unittest discover ./tests/

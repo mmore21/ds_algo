@@ -32,39 +32,68 @@ class BinarySearchTree:
 
     # TODO: Finish deletion implementation.
     def delete(self, node, val):
-        """ Deletes a node from BST and restructures if necessary. """
-        if not self.root:
-            print("37")
-            return None
-        
-        if (val < node.val):
-            self.delete(node.left, val)
-            print("42")
-        elif (val > node.val):
-            self.delete(node.right, val)
-            print("45")
-        else:
-            if (node.left == None and node.right == None):
-                node = None
-            elif (node.left == None):
-                tmp = node
-                node = node.right
-            elif (node.right == None):
-                tmp = node
-                node = node.left
+        """ Deletes a node from BST and restructures if necessary. """      
+        if self.root.val == val:
+            if (not self.root.left and not self.root.right):
+                self.root = None
+            elif (not self.root.left):
+                self.root = self.root.right
+            elif (not self.root.right):
+                self.root = self.root.left
             else:
-                tmp = self.find_min(node.left)
-                node.val = tmp.val
-                node.right = self.delete(node.right, tmp.val)
-
-        return node
+                min_node, parent_node = self.find_min(self.root.right)
+                print("VALS:", min_node.val, parent_node.val)
+                self.root.val = min_node.val
+                parent_node.left = None
+            return True
+        
+        if not node:
+            return False
+        
+        if (val < node.val and node.left):
+            if (val == node.left.val):
+                child = node.left
+                if (not child.left and not child.right):
+                    node.left = None
+                elif (not child.left):
+                    node.left = child.right
+                elif (not child.right):
+                    node.left = child.left
+                else:
+                    min_node, parent_node = self.find_min(child)
+                    node.left.val = min_node.val
+                    parent_node.left = None
+                return True
+            else:
+                self.delete(node.left, val)
+        elif (val > node.val and node.right):
+            if (val == node.right.val):
+                child = node.right
+                if (not child.left and not child.right):
+                    node.right = None
+                elif (not child.left):
+                    node.right = child.right
+                elif (not child.right):
+                    node.right = child.left
+                else:
+                    min_node, parent_node = self.find_min(child)
+                    node.right.val = min_node.val
+                    parent_node.left = None
+                return True
+            else:
+                self.delete(node.right, val)
+        else:
+            return False
+        
 
     def find_min(self, node):
+        parent = node
         if (node == None):
             return None
-        if (node.left != None):
-            return self.find_min(node.left)
-        return node.val
+        while (node.left != None):
+            parent = node
+            node = node.left
+        return [node, parent]
 
     def dfs(self, node):
         """ Performs an in-order DFS of BST. """
@@ -82,15 +111,25 @@ class BinarySearchTree:
 def main():
     bst = BinarySearchTree()
     bst.insert(Node(5))
-    bst.insert(Node(3))
-    bst.insert(Node(1))
     bst.insert(Node(2))
+    bst.insert(Node(1))
+    bst.insert(Node(3))
     bst.insert(Node(5))
     bst.insert(Node(7))
     bst.insert(Node(8))
     bst.insert(Node(6))
     bst.dfs(bst.root)
+    print("")
     bst.delete(bst.root, 6)
+    bst.delete(bst.root, 2)
+    bst.delete(bst.root, 1)
+    bst.delete(bst.root, 7)
+    bst.delete(bst.root, 5)
+    print("HERE:" )
+    bst.delete(bst.root, 3)
+    bst.delete(bst.root, 8)
+    bst.dfs(bst.root)
+    print("")
     bst.dfs(bst.root)
 
 if __name__ == "__main__":
