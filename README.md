@@ -20,10 +20,12 @@ This repository is for educational purposes. Therefore, take into account that t
 
 ### Languages
 
-All data structures and algorithms are implemented with C++ and / or Python 3.
+Data structures and algorithms are implemented with:
+* [C++](https://github.com/mmore21/ds_algo/tree/master/cpp/lib)
+* [Python 3](https://github.com/mmore21/ds_algo/tree/master/python/lib))
 
 ### Outlook
 
 Time permitting, future plans for this repository currently include:
 * Design patterns
-* Implementations in C++
+* Other languages
