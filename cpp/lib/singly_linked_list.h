@@ -1,7 +1,6 @@
-#ifndef SINGLY_LINKED_LIST_H_
-#define SINGLY_LINKED_LIST_H_
+#ifndef SINGLY_LINKED_LIST_H
+#define SINGLY_LINKED_LIST_H
 
-#include <cstddef>
 #include <iostream>
 
 template <class T>
@@ -15,7 +14,7 @@ template <class T>
 class SinglyLinkedList
 {
     public:
-        SinglyLinkedList<T>();
+        SinglyLinkedList();
 
         bool empty() const;
         size_t size() const;
@@ -136,4 +135,4 @@ void SinglyLinkedList<T>::pop_back()
     }
 }
 
-#endif /* SINGLY_LINKED_LIST_H_ */
+#endif /* SINGLY_LINKED_LIST_H */
