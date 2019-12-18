@@ -1,6 +1,7 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
+#include <cstdlib>
 #include <vector>
 
 template <class T>

@@ -150,4 +150,6 @@ dmypy.json
 # Ignore all local history of files
 .history
 
+run_tests
+
 # End of https://www.gitignore.io/api/c++,python,visualstudiocode

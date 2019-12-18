@@ -1,6 +1,7 @@
 #ifndef STACK_H
 #define STACK_H
 
+#include <cstdlib>
 #include <vector>
 
 template <class T>
