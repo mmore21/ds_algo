@@ -1,5 +1,5 @@
 #include "catch.hpp"
-#include "singly_linked_list.h"
+#include "../lib/singly_linked_list.hpp"
 
 TEST_CASE("Linked list push front")
 {

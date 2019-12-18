@@ -22,7 +22,7 @@ This repository is for educational purposes. Therefore, take into account that t
 
 Data structures and algorithms are implemented with:
 * [C++](https://github.com/mmore21/ds_algo/tree/master/cpp/lib)
-* [Python 3](https://github.com/mmore21/ds_algo/tree/master/python/lib))
+* [Python 3](https://github.com/mmore21/ds_algo/tree/master/python/lib)
 
 ### Outlook
 

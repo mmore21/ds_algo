@@ -1,7 +1,17 @@
-# Set Python as language.
-language: python
-# Set Python version.
-python: 3.6
-# Script to run tests.
-script:
-  - python -m unittest discover ./python/tests/
+matrix:
+  include:
+      # Set Python as language.
+    - language: python
+      # Set Python version.
+      python: 3.6
+      # Script to run tests.
+      script:
+        - python -m unittest discover ./python/tests/
+  include:
+      # Set C++ as language.
+    - language: cpp
+      # Set C++ compiler.
+      compiler: gcc
+      # Script to run tests.
+      script:
+        - make -C ./cpp/
