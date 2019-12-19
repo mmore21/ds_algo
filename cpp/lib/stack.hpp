@@ -3,6 +3,7 @@
 
 #include <cstdlib>
 #include <vector>
+#include <exception>
 
 template <class T>
 class Stack
@@ -43,6 +44,10 @@ size_t Stack<T>::size() const
 template <class T>
 T& Stack<T>::top()
 {
+    if (empty())
+    {
+        throw std::exception();
+    }
     return stack.back();
 }
 
@@ -55,6 +60,10 @@ void Stack<T>::push(const T& val)
 template <class T>
 void Stack<T>::pop()
 {
+    if (empty())
+    {
+        throw std::exception();
+    }
     stack.pop_back();
 }
 

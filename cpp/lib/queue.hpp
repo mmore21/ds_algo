@@ -3,6 +3,7 @@
 
 #include <cstdlib>
 #include <vector>
+#include <exception>
 
 template <class T>
 class Queue
@@ -44,12 +45,20 @@ size_t Queue<T>::size() const
 template <class T>
 T& Queue<T>::front()
 {
+    if (queue.empty())
+    {
+        throw std::exception();
+    }
     return queue.front();
 }
 
 template <class T>
 T& Queue<T>::back()
 {
+    if (queue.empty())
+    {
+        throw std::exception();
+    }
     return queue.back();
 }
 
@@ -62,7 +71,11 @@ void Queue<T>::push(const T& val)
 template <class T>
 void Queue<T>::pop()
 {
-    queue.pop_front();
+    if (empty())
+    {
+        throw std::exception();
+    }
+    queue.erase(queue.begin());
 }
 
 #endif /* QUEUE_H */
