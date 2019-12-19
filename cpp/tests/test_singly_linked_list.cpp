@@ -66,6 +66,7 @@ TEST_CASE("Linked list pop back")
     {
         linkedList.push_back(0);
         linkedList.pop_back();
+        std::cout << "SIZE:" << linkedList.size();
         //REQUIRE(linkedList.empty());
     }
 

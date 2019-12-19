@@ -43,10 +43,11 @@ bool SinglyLinkedList<T>::empty() const
 template <class T>
 size_t SinglyLinkedList<T>::size() const
 {
-    size_t count = 0;
+    int count = 0;
     Node<T> *ptr = head;
     while (ptr != nullptr)
     {
+        std::cout << "DATA:" << ptr->data << "\n";
         ptr = ptr->next;
         count++;
     }
