@@ -2,8 +2,6 @@ SRC_FILES := $(wildcard ./lib/*.hpp)
 TEST_FILES := $(wildcard ./tests/test_*.cpp)
 TEST_FILES := $(filter-out ./tests/test_main.cpp, $(TEST_FILES))
 
-
-
 program: $(SRC_FILES) $(TEST_FILES)
 ifeq ($(wildcard test_main.o),)
 	g++ -c ./tests/test_main.cpp -std=c++11
