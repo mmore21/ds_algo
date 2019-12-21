@@ -24,6 +24,8 @@ class SinglyLinkedList
         void pop_front();
         void pop_back();
 
+        void output();
+
     private:
         Node<T> *head;
 };
@@ -31,7 +33,7 @@ class SinglyLinkedList
 template <class T>
 SinglyLinkedList<T>::SinglyLinkedList()
 {
-    this->head = nullptr;
+    head = nullptr;
 }
 
 template <class T>
@@ -45,9 +47,9 @@ size_t SinglyLinkedList<T>::size() const
 {
     int count = 0;
     Node<T> *ptr = head;
+
     while (ptr != nullptr)
     {
-        std::cout << "DATA:" << ptr->data << "\n";
         ptr = ptr->next;
         count++;
     }
@@ -60,17 +62,8 @@ void SinglyLinkedList<T>::push_front(const T& val)
 {
     Node<T> *node = new Node<T>();
     node->data = val;
-
-    if (head == nullptr)
-    {
-        head = node;
-    }
-    else
-    {
-        node->next = head;
-        head = node;
-    }
-    
+    node->next = head;
+    head = node;
 }
 
 template <class T>
@@ -78,6 +71,7 @@ void SinglyLinkedList<T>::push_back(const T& val)
 {
     Node<T> *node = new Node<T>();
     node->data = val;
+    node->next = nullptr;
 
     if (head == nullptr)
     {
@@ -117,23 +111,35 @@ void SinglyLinkedList<T>::pop_back()
     if (head)
     {
         Node<T> *ptr = head;
-
-        if (ptr->next == nullptr)
+        Node<T> *prev;
+        if (head->next == nullptr)
         {
+            head = nullptr;
             delete ptr;
-            ptr = nullptr;
         }
         else
         {
-            while (ptr->next != nullptr)
+            while(ptr->next != nullptr)
             {
-                std::cout << ptr->data << "\n";
+                prev = ptr;
                 ptr = ptr->next;
             }
+            prev->next = nullptr;
             delete ptr;
-            ptr = nullptr;
         }
     }
+}
+
+template <class T>
+void SinglyLinkedList<T>::output()
+{
+    Node<T> *ptr = head;
+    while (ptr)
+    {
+        std::cout << ptr->data << " -> ";
+        ptr = ptr->next;
+    }
+    std::cout << "\n";
 }
 
 #endif /* SINGLY_LINKED_LIST_H */

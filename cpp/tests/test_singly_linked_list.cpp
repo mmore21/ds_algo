@@ -27,13 +27,13 @@ TEST_CASE("Linked list pop front")
 {
     SinglyLinkedList<int> linkedList;
 
-    SECTION("Pop from empty linked list")
+    SECTION("Pop front from empty linked list")
     {
         linkedList.pop_front();
         REQUIRE(linkedList.empty());
     }
 
-    SECTION("Pop from list of size 1")
+    SECTION("Pop front from list of size 1")
     {
 
         linkedList.push_back(0);
@@ -41,7 +41,7 @@ TEST_CASE("Linked list pop front")
         REQUIRE(linkedList.empty());
     }
 
-    SECTION("Pop from list of size greater than 1")
+    SECTION("Pop front from list of size greater than 1")
     {
         for (int i = 0; i < 5; i++)
         {
@@ -56,28 +56,27 @@ TEST_CASE("Linked list pop back")
 {
     SinglyLinkedList<int> linkedList;
 
-    SECTION("Pop from empty linked list")
+    SECTION("Pop back from empty linked list")
     {
         linkedList.pop_back();
-        REQUIRE(linkedList.empty());
+        REQUIRE(linkedList.size() == 0);
     }
 
-    SECTION("Pop from list of size 1")
+    SECTION("Pop back from list of size 1")
     {
-        linkedList.push_back(0);
+        linkedList.push_front(0);
         linkedList.pop_back();
-        //std::cout << "SIZE:" << linkedList.size();
-        //REQUIRE(linkedList.empty());
+        REQUIRE(linkedList.size() == 0);
     }
 
-    SECTION("Pop from list of size greater than 1")
+    SECTION("Pop back from list of size greater than 1")
     {
         for (int i = 0; i < 5; i++)
         {
             linkedList.push_back(i);
         }
         linkedList.pop_back();
-        //REQUIRE(linkedList.size() == 4);
+        REQUIRE(linkedList.size() == 4);
     }
 }
 
@@ -97,7 +96,7 @@ TEST_CASE("Linked list empty")
     }
 }
 
-TEST_CASE( "Size of linked list" )
+TEST_CASE("Size of linked list" )
 {
     SinglyLinkedList<int> linkedList;
 
