@@ -70,7 +70,6 @@ TEST_CASE("BST remove")
 {
     BinarySearchTree<int> bst;
 
-
     SECTION("Remove from empty BST")
     {
         REQUIRE_THROWS(bst.remove(0), std::exception());
