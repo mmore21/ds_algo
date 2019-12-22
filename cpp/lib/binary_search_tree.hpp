@@ -2,6 +2,7 @@
 #define BINARY_SEARCH_TREE_HPP
 
 #include <cstddef>
+#include <iostream>
 #include <exception>
 
 template <class T>
@@ -41,7 +42,7 @@ class BinarySearchTree
         Node<T> *root;
 
         size_t sizeHelper(Node<T> *node) const;
-        void removeHelper(const int &key, Node<T> *node);
+        Node<T> *removeHelper(const int &key, Node<T> *node);
         Node<T> *findMin(Node<T> *node);
 };
 
@@ -144,60 +145,60 @@ void BinarySearchTree<T>::remove(const int &key)
     }
     else
     {
-        removeHelper(key, root);
+        root = removeHelper(key, root);
     }
     
 }
 
 template <class T>
-void BinarySearchTree<T>::removeHelper(const int &key, Node<T> *node)
+Node<T> *BinarySearchTree<T>::removeHelper(const int &key, Node<T> *node)
 {
     if (key < node->key)
     {
-        return removeHelper(key, node->left);
+        node->left = removeHelper(key, node->left);
     }
-    if (key > node->key)
+    else if (key > node->key)
     {
-        return removeHelper(key, node->right);
-    }
-    if (node->left && node->right)
-    {
-        /*
-        Node<T> *tmp = findMin(node->right);
-        node->value = tmp->value;
-        node->right=removeHelper(root->right, tmp->value);
-        */
-
-    }
-    else if (node->left)
-    {
-        Node<T> *tmp = node;
-        node = node->left;
-        delete tmp;
-    }
-    else if (node->right)
-    {
-        Node<T> *tmp = node;
-        node = node->right;
-        delete tmp;
+        node->right = removeHelper(key, node->right);
     }
     else
     {
-        delete node;
-        node = nullptr;
+        if (node->left && node->right)
+        {
+            Node<T> *tmp = findMin(node->right);
+            node->value = tmp->value;
+            node->right=removeHelper(tmp->key, root->right);
+        }
+        else if (node->left)
+        {
+            Node<T> *tmp = node;
+            node = node->left;
+            delete tmp;
+        }
+        else if (node->right)
+        {
+            Node<T> *tmp = node;
+            node = node->right;
+            delete tmp;
+        }
+        else
+        {
+            delete node;
+            node = nullptr;
+        }
     }
-    
+    return node;
 }
 
 template <class T>
 Node<T> *BinarySearchTree<T>::findMin(Node<T> *node)
 {
-    while (root->left)
+    while (node->left)
     {
-        root = root->left;
+        node = node->left;
     }
 
-    return root;
+    return node;
 }
 
 #endif /* BINARY_SEARCH_TREE_HPP */

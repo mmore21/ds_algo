@@ -70,13 +70,51 @@ TEST_CASE("BST remove")
 {
     BinarySearchTree<int> bst;
 
+
     SECTION("Remove from empty BST")
     {
         REQUIRE_THROWS(bst.remove(0), std::exception());
     }
-    SECTION("Remove from BST of size 1")
+    SECTION("Remove root from BST with no children")
     {
         bst.insert(0, 0);
         bst.remove(0);
+        REQUIRE(bst.size() == 0);
+    }
+    SECTION("Remove root from BST with only left child")
+    {
+        bst.insert(1, 1);
+        bst.insert(0, 0);
+        bst.remove(1);
+        REQUIRE(bst.size() == 1);
+    }
+    SECTION("Remove root from BST with only right child")
+    {
+        bst.insert(0, 0);
+        bst.insert(1, 1);
+        bst.remove(0);
+        REQUIRE(bst.size() == 1);
+    }
+    SECTION("Remoove root from BST with both children")
+    {
+        bst.insert(1, 1);
+        bst.insert(0, 0);
+        bst.insert(2, 2);
+        bst.remove(1);
+        REQUIRE(bst.size() == 2);
+    }  
+    SECTION("Remove from left subtree of BST")
+    {
+        bst.insert(2, 2);
+        bst.insert(1, 1);
+        bst.remove(1);
+        REQUIRE(bst.size() == 1);
+    }
+    SECTION("Remove from right subtree of BST")
+    {
+        bst.insert(1, 1);
+        bst.insert(2, 2);
+        bst.remove(2);
+        REQUIRE(bst.size() == 1);
     }
 }
