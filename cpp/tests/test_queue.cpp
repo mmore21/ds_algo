@@ -1,5 +1,5 @@
 #include "catch.hpp"
-#include "../lib/queue.hpp"
+#include "../src/queue.hpp"
 
 TEST_CASE("Queue empty")
 {

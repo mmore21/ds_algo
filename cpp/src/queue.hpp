@@ -1,5 +1,5 @@
-#ifndef QUEUE_H
-#define QUEUE_H
+#ifndef QUEUE_HPP
+#define QUEUE_HPP
 
 #include <cstdlib>
 #include <vector>
@@ -78,4 +78,4 @@ void Queue<T>::pop()
     queue.erase(queue.begin());
 }
 
-#endif /* QUEUE_H */
+#endif /* QUEUE_HPP */

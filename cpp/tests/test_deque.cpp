@@ -1,5 +1,5 @@
 #include "catch.hpp"
-#include "../lib/deque.hpp"
+#include "../src/deque.hpp"
 
 TEST_CASE("Deque empty")
 {

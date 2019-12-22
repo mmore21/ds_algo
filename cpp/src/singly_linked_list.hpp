@@ -1,5 +1,5 @@
-#ifndef SINGLY_LINKED_LIST_H
-#define SINGLY_LINKED_LIST_H
+#ifndef SINGLY_LINKED_LIST_HPP
+#define SINGLY_LINKED_LIST_HPP
 
 #include <iostream>
 #include <cstddef>
@@ -143,4 +143,4 @@ void SinglyLinkedList<T>::output()
     std::cout << "\n";
 }
 
-#endif /* SINGLY_LINKED_LIST_H */
+#endif /* SINGLY_LINKED_LIST_HPP */

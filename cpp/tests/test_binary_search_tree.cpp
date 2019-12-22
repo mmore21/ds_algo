@@ -1,5 +1,5 @@
 #include "catch.hpp"
-#include "../lib/binary_search_tree.hpp"
+#include "../src/binary_search_tree.hpp"
 
 TEST_CASE("BST empty")
 {

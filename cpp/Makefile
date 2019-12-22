@@ -1,4 +1,4 @@
-SRC_FILES := $(wildcard ./lib/*.hpp)
+SRC_FILES := $(wildcard ./src/*.hpp)
 TEST_FILES := $(wildcard ./tests/test_*.cpp)
 TEST_FILES := $(filter-out ./tests/test_main.cpp, $(TEST_FILES))
 

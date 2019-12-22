@@ -1,5 +1,5 @@
 #include "catch.hpp"
-#include "../lib/stack.hpp"
+#include "../src/stack.hpp"
 
 TEST_CASE("Stack empty")
 {

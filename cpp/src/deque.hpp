@@ -1,5 +1,5 @@
-#ifndef DEQUE_H
-#define DEQUE_H
+#ifndef DEQUE_HPP
+#define DEQUE_HPP
 
 #include <cstdlib>
 #include <vector>
@@ -107,4 +107,4 @@ void Deque<T>::pop_front()
     deque.erase(deque.begin());
 }
 
-#endif /* DEQUE_H */
+#endif /* DEQUE_HPP */

@@ -3,6 +3,9 @@ Topic: Singleton
 Category: Design Pattern
 */
 
+#ifndef SINGLETON_HPP
+#define SINGLETON_HPP
+
 class Singleton
 {
     public:
@@ -11,12 +14,11 @@ class Singleton
             static Singleton instance;
             return instance;
         }
-        
-        Singleton(Singleton const&) = delete;
-        void operator=(Singleton const&) = delete;
 
     private:
         Singleton() {}
-        Singleton(Singleton const&);
-        void operator=(Singleton const&);      
+        Singleton(Singleton const&) {}
+        void operator=(Singleton const&) {}
 };
+
+#endif /* SINGLETON_HPP */

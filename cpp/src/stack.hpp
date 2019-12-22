@@ -1,5 +1,5 @@
-#ifndef STACK_H
-#define STACK_H
+#ifndef STACK_HPP
+#define STACK_HPP
 
 #include <cstdlib>
 #include <vector>
@@ -67,4 +67,4 @@ void Stack<T>::pop()
     stack.pop_back();
 }
 
-#endif /* STACK_H */
+#endif /* STACK_HPP */
