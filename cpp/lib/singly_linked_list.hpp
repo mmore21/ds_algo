@@ -2,6 +2,7 @@
 #define SINGLY_LINKED_LIST_H
 
 #include <iostream>
+#include <cstddef>
 
 template <class T>
 struct Node
@@ -33,7 +34,7 @@ class SinglyLinkedList
 template <class T>
 SinglyLinkedList<T>::SinglyLinkedList()
 {
-    head = nullptr;
+    this->head = nullptr;
 }
 
 template <class T>
