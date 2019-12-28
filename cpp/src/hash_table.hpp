@@ -3,7 +3,6 @@
 
 #include <functional>
 #include <vector>
-#include <iostream>
 
 template <class T>
 class HashTable
@@ -13,6 +12,7 @@ public:
     HashTable(const int& size);
     void insert(const T& key);
     T search(const T& key);
+
 private:
     std::size_t getHash(const T& key);
 
@@ -28,13 +28,21 @@ HashTable<T>::HashTable()
 template <class T>
 HashTable<T>::HashTable(const int& size)
 {
-    hashTable = std::vector<std::vector<T>>(size);
+    if (size > 0)
+    {
+        hashTable = std::vector<std::vector<T>>(size);
+    }
+    else
+    {
+        HashTable();
+    }
+    
 }
 
 template <class T>
 void HashTable<T>::insert(const T& key)
 {
-    std::size_t hashVal = getHash(key) % hashTable.size();
+    std::size_t hashVal = getHash(key);
 
     hashTable.at(hashVal).push_back(key);
 }
@@ -42,7 +50,7 @@ void HashTable<T>::insert(const T& key)
 template <class T>
 T HashTable<T>::search(const T& key)
 {
-    std::size_t hashVal = getHash(key) % hashTable.size();
+    std::size_t hashVal = getHash(key);
 
     for (auto value : hashTable.at(hashVal))
     {
@@ -57,17 +65,7 @@ T HashTable<T>::search(const T& key)
 template <class T>
 std::size_t HashTable<T>::getHash(const T& key)
 {
-    std::cout << "HASH:" << std::hash<T>{}(key) << "\n";
-    return std::hash<T>{}(key);
-}
-
-int main()
-{
-    HashTable<std::string> h(5);
-
-    h.insert("203");
-    std::cout << h.search("203") << "\n";
-    return 0;
+    return std::hash<T>{}(key) % hashTable.size();
 }
 
 #endif /* HASH_TABLE_HPP */
