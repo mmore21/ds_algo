@@ -1,5 +1,5 @@
 #include "catch.hpp"
-#include "src/hash_table.hpp"
+#include "../src/hash_table.hpp"
 
 TEST_CASE("Instantiate a hash table")
 {
