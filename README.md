@@ -7,11 +7,13 @@
   Implementation of various data structures and algorithms.
 </p>
 <p align="center">
-  <a href="https://travis-ci.org/mmore21/ds_algo">
-    <img src="https://travis-ci.org/mmore21/ds_algo.svg?branch=master" />
+  <a href="https://github.com/mmore21/ds_algo/actions?query=workflow%3A%22C%2B%2B+CI%22">
+    <img src="https://img.shields.io/github/workflow/status/mmore21/ds_algo/C++%20CI" />
   </a>
   <img src="https://img.shields.io/github/repo-size/mmore21/ds_algo" />
-  <img src="https://img.shields.io/github/last-commit/mmore21/ds_algo">
+  <a href="https://github.com/mmore21/ds_algo/commits/master">
+    <img src="https://img.shields.io/github/last-commit/mmore21/ds_algo">
+  </a>
 </p>
 
 ### Purpose
@@ -21,7 +23,7 @@ This repository is for educational purposes. Therefore, take into account that t
 ### Languages
 
 Data structures and algorithms are implemented with:
-* [C++](https://github.com/mmore21/ds_algo/tree/master/cpp/lib)
+* [C++](https://github.com/mmore21/ds_algo/tree/master/cpp/src)
 * [Python 3](https://github.com/mmore21/ds_algo/tree/master/python/lib)
 
 ### Outlook
