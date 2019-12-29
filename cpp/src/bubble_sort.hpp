@@ -11,7 +11,7 @@ void bubble_sort(std::vector<T> &arr)
     {
         for (int j = 0; j < arr.size() - 1 - i; j++)
         {
-            if (arr.at(j) < arr.at(j+1))
+            if (arr.at(j) > arr.at(j+1))
             {
                 std::iter_swap(arr.begin() + j, arr.begin() + j + 1);
             }
