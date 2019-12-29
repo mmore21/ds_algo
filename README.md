@@ -8,7 +8,7 @@
 </p>
 <p align="center">
   <a href="https://github.com/mmore21/ds_algo/actions?query=workflow%3A%22C%2B%2B+CI%22">
-    <img src="https://img.shields.io/github/workflow/status/mmore21/ds_algo/C++%20CI" />
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/mmore21/ds_algo/C++ CI">
   </a>
   <img src="https://img.shields.io/github/repo-size/mmore21/ds_algo" />
   <a href="https://github.com/mmore21/ds_algo/commits/master">
