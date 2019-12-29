@@ -14,4 +14,4 @@ jobs:
       with:
         python-version: 3.7
     - name: Test with unittest
-      run: python -m unittest discover /python/tests/
+      run: python -m unittest discover python/tests/
