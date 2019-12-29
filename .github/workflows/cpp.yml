@@ -9,7 +9,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: cd
-      run: cd cpp/
     - name: make
-      run: make
+      run: |
+        cd cpp/
+        make
