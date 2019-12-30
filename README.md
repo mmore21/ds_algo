@@ -8,7 +8,10 @@
 </p>
 <p align="center">
   <a href="https://github.com/mmore21/ds_algo/actions?query=workflow%3A%22C%2B%2B+CI%22">
-    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/mmore21/ds_algo/C++ CI">
+    <img alt="GitHub Workflow Status" src="https://github.com/mmore21/ds_algo/workflows/C++%20CI/badge.svg">
+  </a>
+  <a href="https://github.com/mmore21/ds_algo/actions?query=workflow%3A%22Python+CI%22">
+    <img alt="GitHub Workflow Status" src="https://github.com/mmore21/ds_algo/workflows/Python%20CI/badge.svg">
   </a>
   <img src="https://img.shields.io/github/repo-size/mmore21/ds_algo" />
   <a href="https://github.com/mmore21/ds_algo/commits/master">
