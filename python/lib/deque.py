@@ -1,63 +1,63 @@
 """
-Topic: Dequeue
+Topic: Deque
 Category: Data Structure
 Author: Mason Moreland
 """
 
-class Dequeue:
+class Deque:
     def __init__(self):
-        """ Constructor of Dequeue class. """
-        self.dequeue = []
+        """ Constructor of Deque class. """
+        self.deque = []
 
     def push_back(self, val):
-        """ Add item to end of dequeue. """
-        self.dequeue.append(val)
+        """ Add item to end of deque. """
+        self.deque.append(val)
 
     def push_front(self, val):
-        """ Add item to front of dequeue. """
-        self.dequeue.insert(0, val)
+        """ Add item to front of deque. """
+        self.deque.insert(0, val)
 
     def pop_front(self):
-        """ Add item to end of dequeue. """
+        """ Add item to end of deque. """
         if self.size():
-            self.dequeue.pop(0)
+            self.deque.pop(0)
         else:
-            raise IndexError("Dequeue is empty.")
+            raise IndexError("Deque is empty.")
 
     def pop_back(self):
-        """ Remove item from end of dequeue. """
+        """ Remove item from end of deque. """
         if self.size():
-            self.dequeue.pop(-1)
+            self.deque.pop(-1)
         else:
-            raise IndexError("Dequeue is empty.")
+            raise IndexError("Deque is empty.")
 
     def front(self):
-        """ Gets item at front of dequeue. """
+        """ Gets item at front of deque. """
         if self.size():
-            return self.dequeue[0]
+            return self.deque[0]
         else:
             return None
     
     def back(self):
-        """ Gets item at back of dequeue. """
+        """ Gets item at back of deque. """
         if self.size():
-            return self.dequeue[-1]
+            return self.deque[-1]
         else:
             return None
 
     def size(self):
-        """ Gets size of dequeue. """
-        return len(self.dequeue)
+        """ Gets size of deque. """
+        return len(self.deque)
 
     def __str__(self):
-        """ Override default string format of dequeue when printed. """
-        return f"Dequeue object: {self.dequeue}"
+        """ Override default string format of deque when printed. """
+        return f"deque object: {self.deque}"
 
         
 def main():
-    """ Driver function for an example dequeue. """
+    """ Driver function for an example deque. """
     print("Pushing...")
-    d = Dequeue()
+    d = Deque()
     d.push_back(5)
     d.push_front(6)
     d.push_front(7)
