@@ -14,9 +14,9 @@ class Node:
         """ Override default string format of node when printed. """
         return f"Node object: val={self.val}"
 
-class LinkedList:
+class SinglyLinkedList:
     def __init__(self, head=None):
-        """ Constructor of LinkedList class. """
+        """ Constructor of SinglyLinkedList class. """
         self.head = head
     
     def add(self, node):
@@ -87,7 +87,7 @@ class LinkedList:
 def main():
     """ Driver function for an example singly linked list. """
     print("Adding:")
-    list = LinkedList(Node(4))
+    list = SinglyLinkedList(Node(4))
     print(list)
     list.add(Node(5))
     print(list)
