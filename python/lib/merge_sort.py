@@ -23,8 +23,8 @@ def merge_sort(arr):
     if (len(arr) == 1):
         return arr
     
-    partition1 = arr[:len(arr)/2]
-    partition2 = arr[len(arr)/2+1:]
+    partition1 = arr[:len(arr)//2]
+    partition2 = arr[len(arr)//2:]
 
     partition1 = merge_sort(partition1)
     partition2 = merge_sort(partition2)
