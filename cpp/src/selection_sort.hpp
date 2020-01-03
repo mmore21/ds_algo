@@ -3,7 +3,6 @@
 
 #include <vector>
 #include <algorithm>
-#include <limits>
 
 template <typename T>
 void selection_sort(std::vector<T> &arr)

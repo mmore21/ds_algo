@@ -1,3 +1,10 @@
+"""
+Topic: Quick Sort
+Category: Algorithm
+Author: Mason Moreland
+Runtime: O(nlog(n))
+"""
+
 def _partition_lomuto(arr, low, high):
     pivot = arr[high]
     i = low

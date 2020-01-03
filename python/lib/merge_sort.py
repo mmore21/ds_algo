@@ -1,3 +1,9 @@
+"""
+Topic: Merge Sort
+Category: Algorithm
+Author: Mason Moreland
+Runtime: O(nlog(n))
+"""
 
 def merge(arr1, arr2):
     merged_arr = []
