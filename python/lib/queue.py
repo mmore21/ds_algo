@@ -4,7 +4,7 @@ Category: Data Structure
 Author: Mason Moreland
 """
 
-class Queue(object):
+class Queue:
     def __init__(self):
         """ Constructor of Queue class. """
         self.queue = []

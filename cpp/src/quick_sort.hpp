@@ -10,11 +10,11 @@ int partition_lomuto(std::vector<T> &arr, int low, int high)
     T pivot = arr.at(high);
     int i = low;
 
-    for (int j = low, j < high; j++)
+    for (int j = low; j < high; j++)
     {
         if (arr.at(j) < pivot)
         {
-            std::iter_swap(arr.begin() + i, arr.begin() + j)
+            std::iter_swap(arr.begin() + i, arr.begin() + j);
             i++;
         }
     }
