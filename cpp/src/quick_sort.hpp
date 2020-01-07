@@ -5,9 +5,9 @@
 #include <algorithm>
 
 template <typename T>
-int partition_lomuto(std::vector<T> &arr, int low, int high)
+int partition_lomuto(std::vector<T> &arr, const int &low, const int &high)
 {
-    T pivot = arr.at(high);
+    const T &pivot = arr.at(high);
     int i = low;
 
     for (int j = low; j < high; j++)
@@ -25,12 +25,12 @@ int partition_lomuto(std::vector<T> &arr, int low, int high)
 }
 
 template <typename T>
-void quick_sort_helper(std::vector<T> &arr, int low, int high)
+void quick_sort_helper(std::vector<T> &arr, const int &low, const int &high)
 {
     if (low < high)
     {
         int partition_index = partition_lomuto(arr, low, high);
-        quick_sort_helper(arr, low, partition_index + 1);
+        quick_sort_helper(arr, low, partition_index - 1);
         quick_sort_helper(arr, partition_index + 1, high);
     }
 }
