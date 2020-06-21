@@ -33,4 +33,3 @@ Data structures and algorithms are implemented with:
 
 Time permitting, future plans for this repository currently include:
 * Design patterns
-* Other languages
