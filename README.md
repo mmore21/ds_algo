@@ -7,23 +7,23 @@
 
 Implementation of various data structures and algorithms.
 
-### Purpose
+## Purpose
 
 This repository is for educational purposes. Therefore, take into account that the implementations may not be as efficient or robust as standard libraries.
 
-### Languages
+## Languages
 
 Data structures and algorithms are implemented with:
 
 * [C++](https://github.com/mmore21/ds_algo/tree/master/cpp/src)
 * [Python 3](https://github.com/mmore21/ds_algo/tree/master/python/lib)
 
-### Outlook
+## Outlook
 
 Time permitting, future plans for this repository currently include:
 
 * Design patterns
 
-### License
+## License
 
 ds_algo is available under the [MIT License](https://github.com/mmore21/ds_algo/blob/master/LICENSE).
