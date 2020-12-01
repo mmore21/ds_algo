@@ -1,6 +1,3 @@
-# Created by https://www.gitignore.io/api/c++,python,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=c++,python,visualstudiocode
-
 ### C++ ###
 # Prerequisites
 *.d
@@ -151,5 +148,3 @@ dmypy.json
 .history
 
 run_tests
-
-# End of https://www.gitignore.io/api/c++,python,visualstudiocode
